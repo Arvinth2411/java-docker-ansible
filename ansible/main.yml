@@ -1,11 +1,11 @@
 ---
 - hosts: localhost
-  connection: 192.168.0.108
+  connection: 172.31.47.74
   remote_user: dodo
   tasks:
     - name: deploy nginx docker container
       shell: |
         docker stop hello 
         docker rm -f hello
-        docker rmi ravimanickavasagam/hello-java 
-        docker run -d -p 80:8080 --name hello ravimanickavasagam/hello-java 
+        docker rmi arvinthganesan/hello-java 
+        docker run -d -p 80:8080 --name hello arvinthganesan/hello-java 
